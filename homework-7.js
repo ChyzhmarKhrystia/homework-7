@@ -22,6 +22,7 @@ const userData = {
 
 
 const submitButton = document.querySelector('.form-button');
+const table = document.querySelector('.styled-table')
 const nameValue  = document.querySelector('.name');
 const ageValue  = document.querySelector('.age');
 const mailValue  = document.querySelector('.email');
@@ -29,17 +30,21 @@ const jobTitleValue  = document.querySelector('.job_title');
 const addressValue  = document.querySelector('.address');
 const skillsValue  = document.querySelector('.skills');
 
+function getUserData() {
+    const keySkills = userData.keySkills.join(', ')
 
-function buttonHandler() {
     nameValue.textContent = `${userData.firstName} ${userData.secondName}`;
     ageValue.textContent = `${userData.age}`;
     mailValue.textContent = `${userData.email}`;
     jobTitleValue.textContent = `${userData.position}`;
     addressValue.textContent = `${userData.location.country}, ${userData.location.city}, ${userData.location.street}, ${userData.location.streetNumber}`;
-    skillsValue.textContent = `${userData.keySkills}`;
-	return console.log(userData);
+    skillsValue.textContent = `${keySkills}`;
+}
+
+function buttonHandler() {
+    table.style.display = 'flex'
+    return getUserData()
 };
 
 
-// додавання на нашу кнопку Event Listener, який буде реагувати на click по кнопці, а також викликати функцію buttonHandler
 submitButton.addEventListener("click", buttonHandler); 

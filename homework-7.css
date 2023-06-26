@@ -15,8 +15,11 @@ button {
 }
 
 table {
-    display: flex;
     justify-content: center;
+}
+
+.styled-table {
+    display: none;
 }
 
 tbody, th, td {
