@@ -1,6 +1,6 @@
 const userData = {
     firstName: "John",
-    secondName: "Smith",
+    secondName: "Lennon",
     age: "35",
     email: "js@gmail.com",
     position: "Director",
