@@ -7,7 +7,7 @@ const userData = {
     
     location: {
         country: "Ukraine",
-        city: "Kyiv",
+        city: "Lviv",
         street: "Dehtarna",
         streetNumber: "11"
     },
